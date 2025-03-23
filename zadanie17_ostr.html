@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 17</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        ul {
+            list-style-type: square;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Odpowiedzi</h1>
+
+    <h2>1. Cztery sposoby wyprowadzania danych w JS:</h2>
+    <ul>
+        <li><strong><u>z użyciem <code>document.write()</code></u></strong> – umożliwia zapisanie tekstu bezpośrednio do dokumentu HTML.</li>
+        <li><strong><u>z użyciem okienka <code>alert()</code></u></strong> – wyświetla prosty komunikat w oknie dialogowym.</li>
+        <li><strong><u>do okienek formularza</u></strong> – dane mogą być wyświetlane w elementach formularza, takich jak pola tekstowe.</li>
+        <li><strong><u>do tabeli</u></strong> – dane mogą być wstawiane do określonych komórek tabeli HTML.</li>
+    </ul>
+
+    <h2>2. Czym jest funkcja w JS?</h2>
+    <ul>
+        <li><strong><u>Zbiór instrukcji</u></strong> – funkcja to grupa instrukcji zgrupowanych w jedną całość, które wykonują określoną operację.</li>
+        <li><strong><u>Wywołanie funkcji</u></strong> – funkcję uruchamiamy poprzez podanie jej nazwy, co powoduje wykonanie jej kodu.</li>
+        <li><strong><u>Argumenty</u></strong> – funkcja może przyjmować argumenty, które są przekazywane do jej wnętrza i używane podczas jej działania (np. <code>suma_kry(a, b)</code>).</li>
+        <li><strong><u>Zwracanie wartości</u></strong> – funkcja może zwrócić wartość za pomocą słowa kluczowego <code>return</code>, co umożliwia dalsze przetwarzanie tej wartości.</li>
+    </ul>
+
+    <h2>3. Omów metody <code>getElementsByName</code>, <code>getElementById</code>, <code>getElementsByTagName</code> </h2>
+    <table>
+        <tr>
+            <th>Metoda</th>
+            <th>Opis</th>
+        </tr>
+        <tr>
+            <td><code>getElementById("id")</code></td>
+            <td>Dostęp do elementu HTML o określonym atrybucie <code>id</code>.</td>
+        </tr>
+        <tr>
+            <td><code>getElementsByTagName("tag")</code></td>
+            <td>Dostęp do wszystkich elementów HTML o określonym typie znacznika (np. <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>).</td>
+        </tr>
+        <tr>
+            <td><code>getElementsByName("name")</code></td>
+            <td>Dostęp do wszystkich elementów HTML o określonym atrybucie <code>name</code>.</td>
+        </tr>
+    </table>
+
+    <h2>4. Właściwości <code>innerHTML</code>, <code>innerText</code>, <code>className</code>:</h2>
+    <ul>
+        <li><strong><u><code>innerHTML</code></u></strong> – właściwość, która pozwala na odczyt, modyfikację, wstawienie lub usunięcie kodu HTML w danym elemencie.</li>
+        <li><strong><u><code>innerText</code></u></strong> – umożliwia określenie ciągu znaków, który zostanie umieszczony w elemencie, bez kodu HTML.</li>
+        <li><strong><u><code>className</code></u></strong> – umożliwia określenie klasy CSS, która będzie stosowana do elementu w celu jego stylizacji.</li>
+    </ul>
+
+</body>
+</html>

@@ -1,1 +1,1 @@
-# js_ostrowski_z40
+# JS-by-DO

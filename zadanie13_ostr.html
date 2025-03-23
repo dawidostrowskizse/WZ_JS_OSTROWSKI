@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 13</title>
+    <meta charset="utf-8">
+    <script>
+        function Obliczanie() {
+            var m_ostr = parseInt(prompt("Podaj wartość m_ostr:", ""));
+            if (m_ostr > 0) {
+                var numerator1 = 1;
+                var denominator1 = m_ostr + 1;
+                var numerator2 = 1;
+                var denominator2 = m_ostr * (m_ostr + 1);
+                document.write("1/" + m_ostr + " = 1/" + denominator1 + " + 1/" + denominator2);
+            } else {
+                alert("Podano nieprawidłową wartość.");
+            }
+        }
+    </script>
+</head>
+<body style="color:green; font-size:40px;">
+    <b>Zastosowanie:</b><br>
+    Rozkład ułamka egipskiego na dwa ułamki egipskie.<br>
+    <button onclick="Obliaczanie()">Oblicz ułamek egipski</button>
+</body>
+</html>

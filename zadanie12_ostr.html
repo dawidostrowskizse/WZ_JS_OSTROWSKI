@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 12</title>
+    <meta charset="utf-8">
+    <script>
+        function calculateSeconds() {
+            var D1_ostr = parseInt(prompt("Podaj pierwszy numer dnia (D1_ostr):", ""));
+            var G1_ostr = parseInt(prompt("Podaj pierwszą godzinę (G1_ostr):", ""));
+            var D2_ostr = parseInt(prompt("Podaj drugi numer dnia (D2_ostr):", ""));
+            var G2_ostr = parseInt(prompt("Podaj drugą godzinę (G2_ostr):", ""));
+            if (D1_ostr >= D2_ostr && D1_ostr >= 1 && D1_ostr <= 31 && D2_ostr >= 1 && D2_ostr <= 31 && G1_ostr >= 1 && G1_ostr <= 24 && G2_ostr >= 1 && G2_ostr <= 24) {
+                var seconds = ((D1_ostr - D2_ostr) * 24 * 60 * 60) + ((G1_ostr - G2_ostr) * 60 * 60);
+                document.getElementById("result").innerHTML = "Ilość sekund: " + seconds + " sekund";
+            } else {
+                alert("Podano nieprawidłowe dane.");
+            }
+        }
+    </script>
+</head>
+<body style="color:green; font-size:40px;">
+    <b>Zastosowanie:</b><br>
+    Wczytać dwa numer dni z miesiąca stycznia D1_ostr, D2_ostr oraz dwie godziny G1_ostr, G2_ostr i obliczyć ile sekund minęło między tymi dniami i godzinami.<br>
+    <button onclick="calculateSeconds()">Oblicz ilość sekund</button>
+    <div id="result"></div>
+</body>
+</html>

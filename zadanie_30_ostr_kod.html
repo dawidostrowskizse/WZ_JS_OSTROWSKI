@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kod Zadania 16</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <textarea name="kod" cols="80" rows="20" readonly>
+        <html>
+<head>
+    <script>
+        var pudelko = {
+            kolor: 'Czerwony',
+            material: 'Karton',
+            rozmiar: 'Średnie',
+            Pudelko_wyswietl_ostrowski: function () {
+                document.getElementById('wynik').innerHTML =
+                    'Obiekt: Pudełko<br>' +
+                    'Pola:<br>' +
+                    'Kolor: ' + this.kolor + '<br>' +
+                    'Materiał: ' + this.material + '<br>' +
+                    'Rozmiar: ' + this.rozmiar + '<br>' +
+                    'Metoda: Pudelko_wyswietl_ostrowski';
+            }
+        };
+    </script>
+</head>
+<body>
+    <h2>Programowanie obiektowe</h2>
+    <p>Obiekt: Pudełko</p>
+    <button onclick="pudelko.Pudelko_wyswietl_ostrowski()">Pokaż dane obiektu</button>
+    <p id="wynik"></p>
+</body>
+</html>        
+    </textarea>
+</body>
+</html>

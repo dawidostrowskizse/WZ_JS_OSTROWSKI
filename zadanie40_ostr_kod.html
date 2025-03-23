@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <textarea name="kod" cols="80" rows="20" readonly>
+        <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 40 - Ostrowski</title>
+    <style>
+        h1 { text-transform: uppercase; }
+        .wynik { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Proste działania</h1>
+    <h2> Dawid Ostrowski 3K </h2>
+    <label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a">
+    <br><br>
+    <label for="b">Podaj drugą liczbę:</label> <input type="number" id="b">
+    <br><br>
+    <input type="button" value="DODAWANIE" onclick="suma_ostr()">
+    <input type="button" value="ODEJMOWANIE" onclick="roznica_ostr()">
+    <input type="button" value="MNOŻENIE" onclick="iloczyn_ostr()">
+    <input type="button" value="DZIELENIE" onclick="iloraz_ostr()">
+    <input type="button" value="TEORIA - Ostrowski" onclick="teoria_ostr()">
+    <div id="wynik" class="wynik"></div>
+
+    <script>
+        function suma_ostr() {
+            const a = document.getElementById("a").value;
+            const b = document.getElementById("b").value;
+            if (a === "" || b === "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                const suma = (parseFloat(a) + parseFloat(b)).toFixed(2);
+                document.getElementById("wynik").innerHTML = `Wynik działania wynosi: ${suma}`;
+            }
+        }
+
+        function roznica_ostr() {
+            const a = document.getElementById("a").value;
+            const b = document.getElementById("b").value;
+            if (a === "" || b === "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                const roznica = (parseFloat(a) - parseFloat(b)).toFixed(2);
+                document.getElementById("wynik").innerHTML = `Wynik działania wynosi: ${roznica}`;
+            }
+        }
+
+        function iloczyn_ostr() {
+            const a = document.getElementById("a").value;
+            const b = document.getElementById("b").value;
+            if (a === "" || b === "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                const iloczyn = (parseFloat(a) * parseFloat(b)).toFixed(2);
+                document.getElementById("wynik").innerHTML = `Wynik działania wynosi: ${iloczyn}`;
+            }
+        }
+
+        function iloraz_ostr() {
+            const a = document.getElementById("a").value;
+            const b = document.getElementById("b").value;
+            if (a === "" || b === "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else if (parseFloat(b) === 0) {
+                document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+            } else {
+                const iloraz = (parseFloat(a) / parseFloat(b)).toFixed(2);
+                document.getElementById("wynik").innerHTML = `Wynik działania wynosi: ${iloraz}`;
+            }
+        }
+
+        function teoria_ostr() {
+            document.write("<font color=green size=4>Pierwsza linia teorii</font><br>");
+            document.write("<font color=red size=4>&lt;label for=&quot;a&quot;&gt;Podaj pierwszą liczbę:&lt;/label&gt;</font><br>");
+            document.write("<font color=green size=4>Wytłumaczenie: Tworzy etykietę dla pola formularza.</font><br>");
+            document.write("<font color=red size=4>&lt;input type=&quot;number&quot; id=&quot;a&quot;&gt;</font><br>");
+            document.write("<font color=green size=4>Wytłumaczenie: Tworzy pole do wprowadzania liczby.</font><br>");
+            document.write("<font color=red size=4>&lt;input type=&quot;button&quot; value=&quot;DODAWANIE&quot; onclick=&quot;suma_ostr()&quot;&gt;</font><br>");
+            document.write("<font color=green size=4>Wytłumaczenie: Tworzy przycisk, który uruchamia funkcję suma_ostr().</font><br>");
+            document.write("<font color=red size=4>var a = document.getElementById(&quot;a&quot;).value;</font><br>");
+            document.write("<font color=green size=4>Wytłumaczenie: Pobiera wartość z pola o id 'a'.</font><br>");
+            document.write("<font color=red size=4>if (a == &quot;&quot; || b == &quot;&quot;)</font><br>");
+            document.write("<font color=green size=4>Wytłumaczenie: Sprawdza, czy pola są puste.</font><br>");
+        }
+    </script>
+</body>
+</html>
+    </textarea>
+</body>
+</html>

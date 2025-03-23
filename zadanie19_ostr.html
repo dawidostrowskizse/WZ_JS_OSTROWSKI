@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ZADANIE 19 </title>
+  
+</head>
+<body>
+  <h1>Wszystko o KWADRACIE</h1>
+  <p>Podaj długość boku: <input type="text" id="dlugosc" placeholder="wpisz długość"> cm</p>
+  <input type="button" value="Oblicz pole" onclick="obliczPole()">
+  <input type="button" value="Oblicz obwód" onclick="obliczObwod()">
+  <div id="wynik"></div>
+
+  <script>
+    function obliczPole() {
+      var a = parseFloat(document.getElementById('dlugosc').value);
+      if (isNaN(a) || a <= 0) {
+        document.getElementById("wynik").innerHTML = "Proszę podać poprawną długość boku!";
+      } else {
+        var pole = a * a;
+        document.getElementById("wynik").innerHTML = "Pole kwadratu = " + pole.toFixed(2) + " cm²";
+      }
+    }
+
+    function obliczObwod() {
+      var a = parseFloat(document.getElementById('dlugosc').value);
+      if (isNaN(a) || a <= 0) {
+        document.getElementById("wynik").innerHTML = "Proszę podać poprawną długość boku!";
+      } else {
+        var obwod = 4 * a;
+        document.getElementById("wynik").innerHTML = "Obwód kwadratu = " + obwod.toFixed(2) + " cm";
+      }
+    }
+  </script>
+</body>
+</html>

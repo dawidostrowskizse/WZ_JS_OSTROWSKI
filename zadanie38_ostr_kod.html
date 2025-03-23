@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <textarea name="kod" cols="80" rows="20" readonly>
+        <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function mainMenu() {
+            const imie = "Dawid";
+            const nazwisko = "Ostrowski";
+            const dzienUrodzenia = 23;
+            const numerDziennika = 19;
+
+            const liczba1 = imie.length;
+            const liczba2 = liczba1 + 7;
+            const liczba3 = nazwisko.length;
+            const liczba4 = liczba3 + 4;
+
+            const fontSize = 40 + (numerDziennika % 7);
+
+            document.write(`<p style="font-size: ${fontSize}px; color: green; background-color: silver;">
+                Imię: ${imie}, Nazwisko: ${nazwisko}<br>
+                Liczba 1: ${liczba1}, Liczba 2: ${liczba2}, Liczba 3: ${liczba3}, Liczba 4: ${liczba4}
+            </p>`);
+
+            const opcja = parseInt(prompt(`Wybierz opcję:
+                1. Liczba liter imienia - teoria o operatorach logicznych
+                2. Liczba liter nazwiska + 20 - sprawdzanie przedziału (od ; do]
+                3. Dzień urodzenia + 50 - sprawdzanie przedziału (-oo liczba 1) lub [liczba 2 +oo)`));
+
+            if (opcja === 1) {
+                document.write("<p style=\"font-size: 7em; color: blue;\">Teoria o operatorach logicznych:</p>");
+                document.write("<p style=\"font-size: 5em;\">&& - i, || - lub, ! - zaprzeczenie</p>");
+            } else if (opcja === 2) {
+                const liczba_ostr = parseInt(prompt("Podaj liczbę:"));
+                if (liczba_ostr > liczba3 && liczba_ostr <= liczba4) {
+                    document.write(`<p style="font-size: 7em; color: green;">Liczba ${liczba_ostr} należy do przedziału (${liczba3}; ${liczba4}]</p>`);
+                } else {
+                    document.write(`<p style="font-size: 7em; color: red;">Liczba ${liczba_ostr} nie należy do przedziału (${liczba3}; ${liczba4}]</p>`);
+                }
+            } else if (opcja === 3) {
+                const liczba2_ostr = parseInt(prompt("Podaj liczbę:"));
+                if (liczba2_ostr < liczba1 || liczba2_ostr >= liczba2) {
+                    document.write(`<p style="font-size: 7em; color: green;">Liczba ${liczba2_ostr} należy do przedziału (-∞, ${liczba1}) lub [${liczba2}, ∞)</p>`);
+                } else {
+                    document.write(`<p style="font-size: 7em; color: red;">Liczba ${liczba2_ostr} nie należy do przedziału (-∞, ${liczba1}) lub [${liczba2}, ∞)</p>`);
+                }
+            } else {
+                document.write("<p style=\"font-size: 7em; color: red;\">Nie ma takiej opcji!</p>");
+            }
+        }
+    </script>
+</head>
+<body onload="mainMenu()">
+</body>
+</html>
+    </textarea>
+</body>
+</html>

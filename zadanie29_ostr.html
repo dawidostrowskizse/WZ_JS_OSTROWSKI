@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>1. W jaki sposób można określić właściwość danego obiektu?</h1>
+    <p><b>Sposób 1:</b> Użycie zapisu postaci:</p>
+    <pre>
+        auto.marka = "Opel Omega";
+        auto.rok = 1996;
+        auto.cena = 25000;
+    </pre>
+    <p><b>Sposób 2:</b> Użycie notacji tablicowej:</p>
+    <pre>
+        auto["cena"] = 25000;
+    </pre>
+
+    <h1>2. W jaki sposób można odwołać się do pól i metod?</h1>
+    <pre>
+        console.log(samochod1.kolor);
+    </pre>
+    
+    <h1>3. Wymień cechy charakterystyczne konstruktora</h1>
+    <ul>
+        <li>Jest wywoływany automatycznie przy tworzeniu obiektu.</li>
+        <li>Ma taką samą nazwę jak klasa.</li>
+        <li>Nie zwraca wartości.</li>
+        <li>Może przyjmować argumenty.</li>
+    </ul>
+
+    <h1>4. Konstruowanie obiektu</h1>
+    <pre>
+        var osoba = {
+            nazwisko: "Kowalski",
+            imie: "Jan",
+            zawod: "piekarz",
+            wyswietl: function () {
+                document.write(this.nazwisko + " " + this.imie);
+            }
+        };
+    </pre>
+    
+    <h1>5. Znaczenie słowa this</h1>
+    <p>Pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu.</p>
+    
+    <h1>6. Konstruktor w JavaScript</h1>
+    <pre>
+        function Klient(nazwisko, imie, zawod) {
+            this.nazwisko = nazwisko;
+            this.imie = imie;
+            this.zawod = zawod;
+            this.wypisz = function () {
+                alert(this.nazwisko + ' ' + this.imie);
+            };
+        }
+    </pre>
+
+    <h1>7. Znaczenie słowa kluczowego new</h1>
+    <pre>
+        var osoba1 = new Klient("Kowalski", "Jan", "kierowca");
+    </pre>
+    
+    <h1>8. Znaczenie słowa kluczowego prototype</h1>
+    <pre>
+        function Klient() {
+            this.nazwisko = 'Bielski';
+            this.imie = 'Paweł';
+        }
+        Klient.prototype.piszDane = function () {
+            document.write(this.nazwisko + ' ' + this.imie);
+        };
+    </pre>
+    <p><b>Prototype pozwala na dodawanie metod i właściwości do istniejących obiektów.</b></p>
+</body>
+</html>

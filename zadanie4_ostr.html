@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title> Ostrowski 3K </title>
+    <script>
+        function openWindow(url, title, height, width, top, left) {
+            window.open(url, title, `toolbar=no,directories=no,menubar=no,height=${height},width=${width},top=${top},left=${left}`);
+        }
+    </script>
+</head>
+<body>
+    <h1 style="font-size: 2cm; color: red;">Szkielet Zaliczeniowy JavaScript Dawid Ostrowski 3K</h1>
+    <form>
+        <input type="button" value="Zadanie 1 - Ostrowski" onclick="openWindow('zadanie1_ostr.html', 'Zadanie 1 - Ostrowski', 380, 400, 200, 200)">
+        <input type="button" value="Zadanie 2 - Ostrowski" onclick="openWindow('zadanie2_ostr.html', 'Zadanie 2 - Ostrowski', 380, 160, 200, 200)">
+        <input type="button" value="Zadanie 3 - Ostrowski" onclick="openWindow('zadanie3_ost.html', 'Zadanie 3 - Ostrowski', 380, 160, 200, 200)">
+        <input type="button" value="Zadanie 4 - Ostrowski" onclick="openWindow('z4_ostr.html', 'Zadanie 4 - Ostrowski', 600, 700, 200, 400)">
+        <input type="button" value="Zadanie 5 - Ostrowski" onclick="openWindow('zadanie5_ostr.html', 'Zadanie 5 - Ostrowski', 300, 800, 1200, 400)">
+        <input type="button" value="Zamknij okno" onclick="window.close()">
+    </form>
+</body>
+</html>

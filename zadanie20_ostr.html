@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 20</title>
+    <script>
+        function AB_ost(xa, ya, xb, yb) {
+            return Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+        }
+
+        function BC_ost(xb, yb, xc, yc) {
+            return Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+        }
+
+        function AC_ost(xa, ya, xc, yc) {
+            return Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+        }
+
+        function calculateLengths() {
+            let xa = parseFloat(document.getElementById('xa_ost').value);
+            let ya = parseFloat(document.getElementById('ya_ost').value);
+            let xb = parseFloat(document.getElementById('xb_ost').value);
+            let yb = parseFloat(document.getElementById('yb_ost').value);
+            let xc = parseFloat(document.getElementById('xc_ost').value);
+            let yc = parseFloat(document.getElementById('yc_ost').value);
+
+            let ab = AB_ost(xa, ya, xb, yb);
+            let bc = BC_ost(xb, yb, xc, yc);
+            let ac = AC_ost(xa, ya, xc, yc);
+
+            document.getElementById('resultAB').innerText = `Długość boku AB: ${ab.toFixed(2)}`;
+            document.getElementById('resultBC').innerText = `Długość boku BC: ${bc.toFixed(2)}`;
+            document.getElementById('resultAC').innerText = `Długość boku AC: ${ac.toFixed(2)}`;
+        }
+    </script>
+</head>
+<body>
+    <h2>Wprowadź współrzędne punktów:</h2>
+
+    <label for="xa_ost">A(xa, ya): </label>
+    <input type="number" id="xa_ost" placeholder="xa"><br><br>
+
+    <label for="ya_ost">A(xa, ya): </label>
+    <input type="number" id="ya_ost" placeholder="ya"><br><br>
+
+    <label for="xb_ost">B(xb, yb): </label>
+    <input type="number" id="xb_ost" placeholder="xb"><br><br>
+
+    <label for="yb_ost">B(xb, yb): </label>
+    <input type="number" id="yb_ost" placeholder="yb"><br><br>
+
+    <label for="xc_ost">C(xc, yc): </label>
+    <input type="number" id="xc_ost" placeholder="xc"><br><br>
+
+    <label for="yc_ost">C(xc, yc): </label>
+    <input type="number" id="yc_ost" placeholder="yc"><br><br>
+
+    <button type="button" onclick="calculateLengths()">Oblicz długości boków</button>
+
+    <p id="resultAB"></p>
+    <p id="resultBC"></p>
+    <p id="resultAC"></p>
+</body>
+</html>

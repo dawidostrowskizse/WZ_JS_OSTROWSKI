@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Zadanie 5 - Ostrowski </title>
+    <style>
+        body {
+            text-align: center;
+        }
+        h2 {
+            color: red;
+        }
+    </style>
+    <script>
+        var windows = {};
+
+        function WinOpen(graphic, text, top, left, name) {
+            if (!windows[name] || windows[name].closed) {
+                windows[name] = window.open("", name, `toolbar=no,directories=no,menubar=no,height=250,width=400,top=${top},left=${left}`);
+            }
+            windows[name].document.write("<h1 style='text-align:center; color:black;'>" + text + "</h1>");
+            windows[name].document.write("<img src='" + graphic + "' alt='Grafika' style='display:block; margin:auto;'>");
+            windows[name].document.close();
+        }
+    </script>
+</head>
+<body>
+    <h2> Wykonał: Dawid Ostrowski, a mój numer w dzienniku to: 19. Więc mam układ [(19) mod 4 = 3], układ 4. </h2>
+    <input type="button" value="Grafika 1" onclick="WinOpen('g1.png', 'Ktoś ukradł nóżkę od krzesła', 400, 100, 'okienko1')">
+    <input type="button" value="Grafika 2" onclick="WinOpen('g2.png', 'Właściciel się załamał po kradzieży nóżki od krzesła', 300, 500, 'okienko2')">
+    <input type="button" value="Grafika 3" onclick="WinOpen('g3.png', 'Właściciel zadzwonił na Policję, aby to zgłosić', 200, 900, 'okienko3')">
+    <input type="button" value="Grafika 4" onclick="WinOpen('g4.png', 'Policja złapała złodzieja, i oddała nóżkę od krzesła do właściciela', 100, 1300, 'okienko4')">
+    <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>

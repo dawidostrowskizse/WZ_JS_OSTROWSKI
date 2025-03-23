@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function checkYear() {
+            const rok_ostr = parseInt(prompt("Podaj rok, od którego JavaScript jest w użyciu:"));
+            if (isNaN(rok_ostr)) {
+                alert("To nie jest liczba!");
+                return;
+            }
+            document.write(`<p style="font-size: 3em;">Wczytany rok = ${rok_ostr}</p>`);
+            if (rok_ostr === 1995) {
+                document.write("<p style=\"font-size: 4em; color: blue;\">Brawo, znasz rok od kiedy działa JavaScript!</p>");
+            } else {
+                document.write("<p style=\"font-size: 7em; color: red;\">Źle, musisz jeszcze poczytać!</p>");
+            }
+        }
+    </script>
+</head>
+<body onload="checkYear()">
+</body>
+</html>

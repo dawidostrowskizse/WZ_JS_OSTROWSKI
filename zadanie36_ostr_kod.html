@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <textarea name="kod" cols="80" rows="20" readonly>
+      <!DOCTYPE html>
+      <html lang="pl">
+      <head>
+          <meta charset="UTF-8">
+          <script>
+              function Parzyste() {
+                  const number = parseInt(prompt("Podaj liczbę:"));
+                  if (isNaN(number)) {
+                      alert("To nie jest liczba!");
+                      return;
+                  }
+                  if (number % 2 === 0) {
+                      document.write("<p style=\"font-size: 3em; color: red;\">Liczba jest parzysta</p>");
+                  } else {
+                      document.write("<p style=\"font-size: 5em; color: silver;\">Liczba jest nieparzysta</p>");
+                  }
+              }
+          </script>
+      </head>
+      <body onload="Parzyste()">
+      </body>
+      </html>
+    </textarea>
+</body>
+</html>

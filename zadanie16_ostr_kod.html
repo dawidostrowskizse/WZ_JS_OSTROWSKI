@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kod Zadania 16</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <textarea name="kod" cols="80" rows="20" readonly>
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Zadanie 16</title>
+            <meta charset="utf-8">
+            <script>
+                function Obliaczanie() {
+                    var A = parseInt(prompt("Podaj pierwszą liczbę:", ""));
+                    var B = parseInt(prompt("Podaj drugą liczbę:", ""));
+                    if (!isNaN(A) && !isNaN(B)) {
+                        var result = Math.pow(A + B, 3);
+                        var term1 = Math.pow(A, 3);
+                        var term2 = 3 * Math.pow(A, 2) * B;
+                        var term3 = 3 * A * Math.pow(B, 2);
+                        var term4 = Math.pow(B, 3);
+                        document.write("<div style='color:navy; font-size:30px;'>");
+                        document.write("A = " + A + "<br>");
+                        document.write("B = " + B + "<br>");
+                        document.write("(" + A + " + " + B + ")^3 = " + A + "^3 + 3*(" + A + ")^2*(" + B + ") + 3*(" + A + ")*(" + B + ")^2 + " + B + "^3 = " + term1 + " + " + term2 + " + " + term3 + " + " + term4 + " = " + result);
+                        document.write("</div>");
+                    } else {
+                        alert("Podano nieprawidłowe dane.");
+                    }
+                }
+            </script>
+        </head>
+        <body>
+            <b>Zastosowanie:</b><br>
+            Sterowanie wydrukami.<br>
+            <button onclick="Obliaczanie()">Oblicz wyrażenie</button>
+        </body>
+        </html>        
+    </textarea>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <textarea name="kod" cols="80" rows="20" readonly>
+        <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 39 - Ostrowski</title>
+    <style>
+        .menu {
+            color: green;
+            font-size: 2em;
+        }
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+    </style>
+    <script>
+        function fun_ostr() {
+            const opcja_ostr = prompt("Podaj kolor (1, 2, czerwony, niebieski):", "").toLowerCase();
+
+            if (opcja_ostr == "1" || opcja_ostr == "czerwony") {
+                document.write('<h1 style="color: red; font-size: 7em;">Wczytałeś kolor czerwony</h1>');
+            } else if (opcja_ostr == "2" || opcja_ostr == "niebieski") {
+                document.write('<h6 style="color: blue; font-size: 1em;">Wczytałeś kolor niebieski</h6>');
+            } else {
+                document.write('<p style="color: black; font-size: 2em;">Nieprawidłowy wybór!</p>');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="menu">
+        MENU:<br>
+        <span class="red">1 - CZERWONY</span><br>
+        <span class="blue">2 - NIEBIESKI</span><br>
+    </div>
+    <input type="button" value="Oblicz" onclick="fun_ostr()">
+</body>
+</html>
+    </textarea>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function Pudelko(kolor, material, rozmiar, waga) {
+            this.kolor = kolor;
+            this.material = material;
+            this.rozmiar = rozmiar;
+            this.waga = waga;
+        }
+
+        Pudelko.prototype.Pudelko_wyswietl_ostrowski = function () {
+            document.write("Obiekt: Pudełko<br>");
+            document.write("Kolor: " + this.kolor + "<br>");
+            document.write("Materiał: " + this.material + "<br>");
+            document.write("Rozmiar: " + this.rozmiar + "<br>");
+            document.write("Metoda: Pudelko_wyswietl_ostrowski<br>");
+        };
+
+        var pudelko1 = new Pudelko('Czerwony', 'Karton', 'Średni', '2kg');
+        var pudelko2 = new Pudelko('Niebieski', 'Plastik', 'Duży', '3kg');
+        var pudelko3 = new Pudelko('Zielony', 'Drewno', 'Mały', '5kg');
+
+        Pudelko.prototype.Pudelko_pokaz_ostrowski = function () {
+            document.write("Nowa właściwość: Waga - " + this.waga + "<br>");
+            document.write("Nowa metoda: Pudelko_pokaz_ostrowski<br>");
+        };
+    </script>
+</head>
+<body>
+    <button onclick="pudelko1.Pudelko_wyswietl_ostrowski()">Pokaż informacje o pudełku 1</button>
+    <button onclick="pudelko2.Pudelko_wyswietl_ostrowski()">Pokaż informacje o pudełku 2</button>
+    <button onclick="pudelko3.Pudelko_wyswietl_ostrowski()">Pokaż informacje o pudełku 3</button>
+    <br>
+    <button onclick="pudelko1.Pudelko_pokaz_ostrowski()">Pokaż wagę pudełka 1</button>
+    <button onclick="pudelko2.Pudelko_pokaz_ostrowski()">Pokaż wagę pudełka 2</button>
+    <button onclick="pudelko3.Pudelko_pokaz_ostrowski()">Pokaż wagę pudełka 3</button>
+</body>
+</html>

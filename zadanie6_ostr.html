@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podstawy JavaScript</title>
+</head>
+<body>
+    <h1>Podstawy JavaScript</h1>
+
+    <h2>1. Typy okien dialogowych</h2>
+    <ul>
+        <li><strong>Alert:</strong> Okienko wyświetlające wiadomość z przyciskiem "OK".</li>
+        <li><strong>Prompt:</strong> Okienko umożliwiające użytkownikowi wprowadzenie tekstu, którego wartość można później wykorzystać w programie.</li>
+        <li><strong>Confirm:</strong> Służy do potwierdzenia działania przez użytkownika (np. „Czy jesteś pewien?”).</li>
+    </ul>
+
+    <h2>2. Konwersja danych</h2>
+    <p>Wartości wprowadzone przez użytkownika za pomocą <code>prompt</code> są traktowane jako tekst. Aby wykonywać operacje matematyczne, konieczna jest konwersja tych danych na typ liczbowy:</p>
+    <ul>
+        <li><code>parseFloat(wartosc)</code> – zamienia na liczbę zmiennoprzecinkową.</li>
+        <li><code>parseInt(wartosc)</code> – zamienia na liczbę całkowitą.</li>
+        <li><code>wartosc.toString()</code> – zamienia na ciąg znaków.</li>
+    </ul>
+
+    <h2>3. Zasady nazewnictwa zmiennych</h2>
+    <p>Podczas tworzenia zmiennych warto przestrzegać kilku zasad:</p>
+    <ul>
+        <li>Nazwy zmiennych mogą zaczynać się od litery, znaku <code>$</code> lub <code>_</code>. Niedozwolone są spacje i znaki specjalne (np. <code>&</code>, <code>.</code>, <code>+</code>).</li>
+        <li>Przykłady poprawnych nazw: <code>zmienna1</code>, <code>$wynik</code>, <code>_rozmiar</code>.</li>
+        <li>Przykłady błędnych nazw: <code>1zmienna</code>, <code>wynik+gra</code>, <code>wysokość</code>.</li>
+        <li>Wielkość liter ma znaczenie – <code>Rekord</code> i <code>rekord</code> to różne zmienne.</li>
+        <li>Unikaj używania słów kluczowych JavaScript jako nazw zmiennych.</li>
+    </ul>
+
+    <h2>4. Typy danych w JavaScript</h2>
+    <p>W języku JavaScript typy danych są przypisywane dynamicznie podczas nadawania wartości zmiennym:</p>
+    <ul>
+        <li><strong>Number:</strong> Typ numeryczny (liczby całkowite i zmiennoprzecinkowe).</li>
+        <li><strong>String:</strong> Typ tekstowy.</li>
+        <li><strong>Boolean:</strong> Typ logiczny (prawda/fałsz).</li>
+        <li><strong>Null:</strong> Brak wartości.</li>
+        <li><strong>Undefined:</strong> Niezdefiniowana wartość.</li>
+        <li><strong>Object:</strong> Typ złożony (np. tablice, obiekty).</li>
+    </ul>
+</body>
+</html>

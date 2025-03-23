@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function showPrompt() {
+            var name = prompt("Napisz imię", "Imię Nazwisko");
+            if (name) {
+                document.write("Witaj " + name + "! Jak się masz?");
+            }
+        }
+    </script>
+</head>
+<body>
+    <b>Zastosowanie:</b><br>
+    Jest używany, kiedy użytkownik ma wpisać coś, np. zanim wejdzie w dany moduł strony, np. hasło.<br>
+    Użytkownik po wpisaniu wartości może nacisnąć „OK” albo „Cancel”. Jeżeli użytkownik kliknie „OK”,<br>
+    metoda zwraca wpisaną wartość, a w przeciwnym wypadku zwraca null.<br>
+    <button onclick="showPrompt()">Pokaż prompt box</button>
+</body>
+</html>

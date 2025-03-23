@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script type="text/javascript">
+        var pudelko = {
+            kolor: 'Czerwony',
+            material: 'Karton',
+            rozmiar: 'Średni',
+            Pudelko_wyswietl_ostrowski: function () {
+                document.write("Obiekt: Pudełko<br>");
+                document.write("Kolor: " + this.kolor + "<br>");
+                document.write("Materiał: " + this.material + "<br>");
+                document.write("Rozmiar: " + this.rozmiar + "<br>");
+                document.write("Metoda: Pudelko_wyswietl_ostrowski<br>");
+            }
+        };
+        
+        pudelko.waga = '2kg';
+        pudelko.Pudelko_pokaz_ostrowski = function () {
+            document.write("Nowa właściwość: Waga - " + this.waga + "<br>");
+            document.write("Nowa metoda: Pudelko_pokaz_ostrowski<br>");
+        };
+    </script>
+</head>
+<body>
+    <button onclick="pudelko.Pudelko_wyswietl_ostrowski()">Pokaż informacje o pudełku</button>
+    <button onclick="pudelko.Pudelko_pokaz_ostrowski()">Pokaż nowe informacje</button>
+</body>
+</html>
