@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacje o pętlach</title>
+    <style>
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .scheme {
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informacje o pętlach</h1>
+
+    <h2>Pętla for</h2>
+    <p>Nazwa pętli: Pętla for</p>
+    <p>Konstrukcja:</p>
+    <pre>
+        for (inicjalizacja; warunek; aktualizacja) {
+            // kod do wykonania
+        }
+    </pre>
+    <p>Opis:</p>
+    <p>Pętla for jest używana do wykonywania bloku kodu określoną liczbę razy. Inicjalizacja ustala początkową wartość zmiennej sterującej, warunek określa, kiedy pętla powinna się zakończyć, a aktualizacja zmienia wartość zmiennej sterującej po każdej iteracji.</p>
+    <div class="scheme">
+        <img src="https://i.imgur.com/1234567.png" alt="Schemat blokowy pętli for">
+    </div>
+
+    <h2>Pętla while</h2>
+    <p>Nazwa pętli: Pętla while</p>
+    <p>Konstrukcja:</p>
+    <pre>
+        while (warunek) {
+            // kod do wykonania
+        }
+    </pre>
+    <p>Opis:</p>
+    <p>Pętla while jest używana do wykonywania bloku kodu, dopóki warunek jest spełniony. Warunek jest sprawdzany na początku każdej iteracji.</p>
+    <div class="scheme">
+        <img src="https://i.imgur.com/7654321.png" alt="Schemat blokowy pętli while">
+    </div>
+
+    <h2>Pętla do-while</h2>
+    <p>Nazwa pętli: Pętla do-while</p>
+    <p>Konstrukcja:</p>
+    <pre>
+        do {
+            // kod do wykonania
+        } while (warunek);
+    </pre>
+    <p>Opis:</p>
+    <p>Pętla do-while jest podobna do pętli while, ale warunek jest sprawdzany na końcu każdej iteracji. Oznacza to, że blok kodu jest wykonywany przynajmniej raz, nawet jeśli warunek jest fałszywy od początku.</p>
+    <div class="scheme">
+        <img src="https://i.imgur.com/8901234.png" alt="Schemat blokowy pętli do-while">
+    </div>
+
+    <p>Poniżej znajdują się przykłady użycia tych pętli w praktyce:</p>
+
+    <h2>Przykłady użycia pętli</h2>
+    <pre>
+        // Pętla for
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+
+        // Pętla while
+        let j = 0;
+        while (j < 5) {
+            console.log(j);
+            j++;
+        }
+
+        // Pętla do-while
+        let k = 0;
+        do {
+            console.log(k);
+            k++;
+        } while (k < 5);
+    </pre>
+
+</body>
+</html>
